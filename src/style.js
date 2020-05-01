@@ -1,4 +1,5 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+var deviceWidth = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -7,25 +8,17 @@ const styles = StyleSheet.create({
   },
   mask: {
     flex: 1,
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
+    borderTopEndRadius: 50
   },
   container: {
+    borderTopStartRadius: 25,
+    borderTopEndRadius: 25,
     backgroundColor: "#fff",
-    width: "100%",
+    alignSelf: "center",
+    width: deviceWidth - 25,
     height: 0,
     overflow: "hidden"
-  },
-  draggableContainer: {
-    width: "100%",
-    alignItems: "center",
-    backgroundColor: "transparent"
-  },
-  draggableIcon: {
-    width: 35,
-    height: 5,
-    borderRadius: 5,
-    margin: 10,
-    backgroundColor: "#ccc"
   }
 });
 

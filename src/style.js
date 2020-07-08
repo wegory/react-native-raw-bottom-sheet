@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     borderTopEndRadius: 25,
     backgroundColor: "#fff",
     alignSelf: "center",
-    width: deviceWidth - 25,
+    width: deviceWidth,
     height: 0,
     overflow: "hidden"
   }

@@ -29,11 +29,13 @@ class RBSheet extends Component {
     if (visible) {
       this.setState({ modalVisible: visible });
       Animated.timing(animatedHeight, {
+        useNativeDriver: false,
         toValue: height,
         duration
       }).start();
     } else {
       Animated.timing(animatedHeight, {
+        useNativeDriver: false,
         toValue: minClosingHeight,
         duration
       }).start(() => {
